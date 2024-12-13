@@ -1,0 +1,33 @@
+{
+    "name": "almirfrances/tanzainstaller",
+    "description": "A Laravel package for a multistep installation wizard",
+    "type": "library",
+    "keywords": ["laravel", "installer", "package", "wizard"],
+    "homepage": "https://almirfrances.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Almir Frances",
+            "email": "almirfrances@example.com",
+            "homepage": "https://almirfrances.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlmirFrances\\TanzaInstaller\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlmirFrances\\TanzaInstaller\\TanzaInstallerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
