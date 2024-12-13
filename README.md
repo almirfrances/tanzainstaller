@@ -82,3 +82,6 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 License
 
 TanzaInstaller is open-sourced software licensed under the MIT license.
+
+**Author**: [Almir Frances](https://almirfrances.com)  
+**GitHub**: [almirfrances](https://github.com/almirfrances)
