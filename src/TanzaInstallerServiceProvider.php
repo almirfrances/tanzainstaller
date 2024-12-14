@@ -12,18 +12,26 @@ class TanzaInstallerServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot()
+       public function boot()
     {
         $this->registerMiddleware();
+
         // Register the views
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'installer');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'tanzainstaller');
+
+        // Publishable Resources
+        $this->publishes([
+            __DIR__ . '/config/tanzainstaller.php' => config_path('tanzainstaller.php'),
+            __DIR__ . '/resources/views' => resource_path('views/vendor/tanzainstaller'),
+        ], 'tanzainstaller');
 
         // Register the routes
         $this->registerRoutes();
 
-        // Bypass .env dependency by setting fallback configuration values
+        // Set default configurations
         $this->setDefaultConfigurations();
     }
+
 
     protected function registerMiddleware()
 {
