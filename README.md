@@ -30,7 +30,7 @@ composer require almirfrances/tanzainstaller --dev
 Publish the package configuration and views using the command:
 
 ```bash
-php artisan vendor:publish --provider="AlmirFrances\TanzaInstaller\TanzaInstallerServiceProvider"
+php artisan vendor:publish --tag=tanzainstaller
 
 ```
 
