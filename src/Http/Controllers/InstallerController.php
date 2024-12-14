@@ -44,7 +44,7 @@ class InstallerController extends Controller
         } catch (\Exception $e) {
             return back()->withErrors(['key_error' => 'Failed to generate application key: ' . $e->getMessage()]);
         }
-        return view('installer::step1');
+        return view('tanzainstaller::step1');
     }
 
     /**
@@ -54,7 +54,7 @@ class InstallerController extends Controller
     {
         $requirements = $this->checkRequirements();
 
-        return view('installer::step2', compact('requirements'));
+        return view('tanzainstaller::step2', compact('requirements'));
     }
 
     /**
@@ -112,7 +112,7 @@ protected function checkFolderPermission($name, $path, $requiredPermission)
         if (!session()->isStarted()) {
             session()->start();
         }
-        return view('installer::step3');
+        return view('tanzainstaller::step3');
     }
 
     public function saveDatabase(Request $request)
@@ -226,19 +226,19 @@ public function installDatabase()
 
     public function step4()
 {
-    return view('installer::step4');
+    return view('tanzainstaller::step4');
 }
 
 public function step5()
 {
-    return view('installer::step5');
+    return view('tanzainstaller::step5');
 }
 
 public function complete()
 {
     $this->markInstallationAsComplete();
 
-    return view('installer::complete');
+    return view('tanzainstaller::complete');
 }
 
 public function saveAdmin(Request $request)
